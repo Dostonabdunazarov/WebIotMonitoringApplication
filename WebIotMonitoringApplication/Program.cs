@@ -33,5 +33,17 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+//try
+//{
+//    using var scope = app.Services.CreateScope();
+//    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    await db.Database.OpenConnectionAsync();
+//    Console.WriteLine("Database connection: OK");
+//    await db.Database.CloseConnectionAsync();
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Database connection failed: {ex.Message}");
+//}
 
 app.Run();
